@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6NC39VJ4t4UCW/xfXXT/b8uSFACGR3kRWQNvU9A7aUiQPpmFhvjRafVSsS27D/ewoAsaGxTUkljQHPz9o5RGNQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ntesa\\Documents\\Visual Studio\\CSE 210\\cse210-student-articulate-csharp-complete\\Unit05\\Unit05.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ntesa\\.nuget\\packages\\raylib-cs\\3.7.0.1\\raylib-cs.3.7.0.1.nupkg.sha512",
+    "C:\\Users\\ntesa\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
