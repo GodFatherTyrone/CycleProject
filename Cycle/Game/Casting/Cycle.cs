@@ -13,10 +13,12 @@ namespace Unit05.Game.Casting
         private List<Actor> _segments = new List<Actor>();
 
         /// <summary>
-        /// Constructs a new instance of a Snake.
+        /// Constructs a new instance of a Cycle.
         /// </summary>
-        public Cycle()
+        public Cycle(Point start, Color color)
         {
+            SetPosition(start);
+            SetColor(color);
             PrepareBody();
         }
 
@@ -100,15 +102,15 @@ namespace Unit05.Game.Casting
         /// </summary>
         private void PrepareBody()
         {
-            int x = Constants.MAX_X / 2;
-            int y = Constants.MAX_Y / 2;
+            int x = GetPosition().GetX();
+            int y = GetPosition().GetY();
 
             for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
             {
                 Point position = new Point(x - i * Constants.CELL_SIZE, y);
                 Point velocity = new Point(1 * Constants.CELL_SIZE, 0);
                 string text = i == 0 ? "8" : "#";
-                Color color = i == 0 ? Constants.YELLOW : Constants.GREEN;
+                Color color = i == 0 ? Constants.YELLOW : GetColor();
 
                 Actor segment = new Actor();
                 segment.SetPosition(position);

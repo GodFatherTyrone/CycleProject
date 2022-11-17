@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ntesa\\Documents\\Visual Studio\\CSE 210\\cse210-student-articulate-csharp-complete\\Unit05\\Unit05.csproj": {}
+    "C:\\Users\\ntesa\\Documents\\Visual Studio\\CSE 210\\CycleProject\\Cycle\\Unit05.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ntesa\\Documents\\Visual Studio\\CSE 210\\cse210-student-articulate-csharp-complete\\Unit05\\Unit05.csproj": {
+    "C:\\Users\\ntesa\\Documents\\Visual Studio\\CSE 210\\CycleProject\\Cycle\\Unit05.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ntesa\\Documents\\Visual Studio\\CSE 210\\cse210-student-articulate-csharp-complete\\Unit05\\Unit05.csproj",
+        "projectUniqueName": "C:\\Users\\ntesa\\Documents\\Visual Studio\\CSE 210\\CycleProject\\Cycle\\Unit05.csproj",
         "projectName": "Unit05",
-        "projectPath": "C:\\Users\\ntesa\\Documents\\Visual Studio\\CSE 210\\cse210-student-articulate-csharp-complete\\Unit05\\Unit05.csproj",
+        "projectPath": "C:\\Users\\ntesa\\Documents\\Visual Studio\\CSE 210\\CycleProject\\Cycle\\Unit05.csproj",
         "packagesPath": "C:\\Users\\ntesa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ntesa\\Documents\\Visual Studio\\CSE 210\\cse210-student-articulate-csharp-complete\\Unit05\\obj\\",
+        "outputPath": "C:\\Users\\ntesa\\Documents\\Visual Studio\\CSE 210\\CycleProject\\Cycle\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ntesa\\AppData\\Roaming\\NuGet\\NuGet.Config"

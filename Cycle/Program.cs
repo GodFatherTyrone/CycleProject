@@ -2,7 +2,7 @@
 using Unit05.Game.Directing;
 using Unit05.Game.Scripting;
 using Unit05.Game.Services;
-
+using System;
 
 namespace Unit05
 {
@@ -19,9 +19,8 @@ namespace Unit05
         {
             // create the cast
             Cast cast = new Cast();
-            cast.AddActor("food", new Food());
-            cast.AddActor("p1", new Cycle());
-            cast.AddActor("p2", new Cycle());
+            cast.AddActor("p1", new Cycle(new Point(15, 15), Constants.RED));
+            cast.AddActor("p2", new Cycle(new Point(450,450), Constants.GREEN));
             cast.AddActor("score", new Score());
 
             // create the services

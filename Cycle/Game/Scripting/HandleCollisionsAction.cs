@@ -42,17 +42,17 @@ namespace Unit05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleFoodCollisions(Cast cast)
         {
-            Cycle cycle = (Cycle)cast.GetFirstActor("snake");
+            Cycle cycle = (Cycle)cast.GetFirstActor("p1");
             Score score = (Score)cast.GetFirstActor("score");
             Food food = (Food)cast.GetFirstActor("food");
             
-            if (cycle.GetHead().GetPosition().Equals(food.GetPosition()))
-            {
-                int points = food.GetPoints();
-                cycle.GrowTail(points);
-                score.AddPoints(points);
-                food.Reset();
-            }
+            //if (cycle.GetHead().GetPosition().Equals(food.GetPosition()))
+            //{
+                //int points = food.GetPoints();
+                cycle.GrowTail(1);
+                //score.AddPoints(points);
+                //food.Reset();
+            //}
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Unit05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
-            Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+            Cycle cycle = (Cycle)cast.GetFirstActor("p1");
             Actor head = cycle.GetHead();
             List<Actor> body = cycle.GetBody();
 
@@ -78,9 +78,9 @@ namespace Unit05.Game.Scripting
         {
             if (_isGameOver == true)
             {
-                Cycle cycle = (Cycle)cast.GetFirstActor("snake");
+                Cycle cycle = (Cycle)cast.GetFirstActor("p1");
                 List<Actor> segments = cycle.GetSegments();
-                Food food = (Food)cast.GetFirstActor("food");
+                //Food food = (Food)cast.GetFirstActor("food");
 
                 // create a "game over" message
                 int x = Constants.MAX_X / 2;
@@ -97,7 +97,7 @@ namespace Unit05.Game.Scripting
                 {
                     segment.SetColor(Constants.WHITE);
                 }
-                food.SetColor(Constants.WHITE);
+                //food.SetColor(Constants.WHITE);
             }
         }
 
