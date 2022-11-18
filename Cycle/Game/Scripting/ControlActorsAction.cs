@@ -28,13 +28,13 @@ namespace Unit05.Game.Scripting
         public void Execute(Cast cast, Script script)
         {
             // left 
-            if (_keyboardService.IsKeyDown("i"))
+            if (_keyboardService.IsKeyDown("a"))
             {
                 _direction1 = new Point(-Constants.CELL_SIZE, 0);
             }
 
             // right
-            if (_keyboardService.IsKeyDown("s"))
+            if (_keyboardService.IsKeyDown("d"))
             {
                 _direction1 = new Point(Constants.CELL_SIZE, 0);
             }
@@ -55,25 +55,25 @@ namespace Unit05.Game.Scripting
             cycle1.TurnHead(_direction1);
 
             // left 2
-            if (_keyboardService.IsKeyDown("i"))
+            if (_keyboardService.IsKeyDown("j"))
             {
                 _direction2 = new Point(-Constants.CELL_SIZE, 0);
             }
 
             // right 2
-            if (_keyboardService.IsKeyDown("k"))
+            if (_keyboardService.IsKeyDown("l"))
             {
                 _direction2 = new Point(Constants.CELL_SIZE, 0);
             }
 
             // up 2
-            if (_keyboardService.IsKeyDown("j"))
+            if (_keyboardService.IsKeyDown("i"))
             {
                 _direction2 = new Point(0, -Constants.CELL_SIZE);
             }
 
             // down 2
-            if (_keyboardService.IsKeyDown("l"))
+            if (_keyboardService.IsKeyDown("k"))
             {
                 _direction2 = new Point(0, Constants.CELL_SIZE);
             }
