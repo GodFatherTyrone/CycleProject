@@ -42,14 +42,16 @@ namespace Unit05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleFoodCollisions(Cast cast)
         {
-            Cycle cycle = (Cycle)cast.GetFirstActor("p1");
+            Cycle cycle1 = (Cycle)cast.GetFirstActor("p1");
+            Cycle cycle2 = (Cycle)cast.GetFirstActor("p2");
             Score score = (Score)cast.GetFirstActor("score");
             Food food = (Food)cast.GetFirstActor("food");
             
             //if (cycle.GetHead().GetPosition().Equals(food.GetPosition()))
             //{
                 //int points = food.GetPoints();
-                cycle.GrowTail(1);
+                cycle1.GrowTail(1);
+                cycle2.GrowTail(1);
                 //score.AddPoints(points);
                 //food.Reset();
             //}
@@ -61,13 +63,32 @@ namespace Unit05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
-            Cycle cycle = (Cycle)cast.GetFirstActor("p1");
-            Actor head = cycle.GetHead();
-            List<Actor> body = cycle.GetBody();
+            Cycle cycle1 = (Cycle)cast.GetFirstActor("p1");
+            Cycle cycle2 = (Cycle)cast.GetFirstActor("p2");
+            Actor head1 = cycle1.GetHead();
+            Actor head2 = cycle2.GetHead();
+            List<Actor> body1 = cycle1.GetBody();
+            List<Actor> body2 = cycle2.GetBody();
+            
 
-            foreach (Actor segment in body)
+            foreach (Actor segment in body1)
             {
-                if (segment.GetPosition().Equals(head.GetPosition()))
+                if (segment.GetPosition().Equals(head1.GetPosition()))
+                {
+                    _isGameOver = true;
+                }
+                if (segment.GetPosition().Equals(head2.GetPosition()))
+                {
+                    _isGameOver = true;
+                }
+            }
+            foreach (Actor segment in body2)
+            {
+                if (segment.GetPosition().Equals(head1.GetPosition()))
+                {
+                    _isGameOver = true;
+                }
+                if (segment.GetPosition().Equals(head2.GetPosition()))
                 {
                     _isGameOver = true;
                 }
@@ -78,8 +99,10 @@ namespace Unit05.Game.Scripting
         {
             if (_isGameOver == true)
             {
-                Cycle cycle = (Cycle)cast.GetFirstActor("p1");
-                List<Actor> segments = cycle.GetSegments();
+                Cycle cycle1 = (Cycle)cast.GetFirstActor("p1");
+                Cycle cycle2 = (Cycle)cast.GetFirstActor("p2");
+                List<Actor> segments1 = cycle1.GetSegments();
+                List<Actor> segments2 = cycle2.GetSegments();
                 //Food food = (Food)cast.GetFirstActor("food");
 
                 // create a "game over" message
@@ -93,7 +116,11 @@ namespace Unit05.Game.Scripting
                 cast.AddActor("messages", message);
 
                 // make everything white
-                foreach (Actor segment in segments)
+                foreach (Actor segment in segments1)
+                {
+                    segment.SetColor(Constants.WHITE);
+                }
+                foreach (Actor segment in segments2)
                 {
                     segment.SetColor(Constants.WHITE);
                 }
