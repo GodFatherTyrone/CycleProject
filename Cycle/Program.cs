@@ -19,8 +19,8 @@ namespace Unit05
         {
             // create the cast
             Cast cast = new Cast();
-            cast.AddActor("p1", new Cycle(new Point(15, 15), Constants.RED));
-            cast.AddActor("p2", new Cycle(new Point(450,450), Constants.GREEN));
+            cast.AddActor("p1", new Cycle(new Point(225, Constants.MAX_Y / 2), Constants.RED));
+            cast.AddActor("p2", new Cycle(new Point(675, Constants.MAX_Y / 2), Constants.GREEN));
             cast.AddActor("score", new Score());
 
             // create the services
